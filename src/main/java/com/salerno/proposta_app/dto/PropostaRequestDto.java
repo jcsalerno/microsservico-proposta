@@ -1,0 +1,4 @@
+package com.salerno.proposta_app.dto;
+
+public class PropostaRequestDto {
+}
