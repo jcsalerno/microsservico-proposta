@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PropostaRepository extends CrudRepository<Proposta, Long> {
-    void save();
+
 }
