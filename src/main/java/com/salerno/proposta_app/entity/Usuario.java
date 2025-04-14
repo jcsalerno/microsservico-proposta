@@ -1,9 +1,6 @@
 package com.salerno.proposta_app.entity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+
+import jakarta.persistence.*;
 
 @Entity
 public class Usuario {
@@ -13,7 +10,19 @@ public class Usuario {
     private Long id;
 
     private String nome;
+    private String sobrenome;
+    private String cpf;
+    private String telefone;
+    private Double renda;
 
+    @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL)
+    private Proposta proposta;
+
+    // Construtor padrão obrigatório para JPA
+    public Usuario() {
+    }
+
+    // Construtor completo
     public Usuario(Long id, String nome, String sobrenome, String cpf, String telefone, Double renda, Proposta proposta) {
         this.id = id;
         this.nome = nome;
@@ -24,14 +33,7 @@ public class Usuario {
         this.proposta = proposta;
     }
 
-    private String sobrenome;
-
-    private String cpf;
-
-    private String telefone;
-
-    private Double renda;
-
+    // Getters e Setters
     public Long getId() {
         return id;
     }
@@ -88,6 +90,16 @@ public class Usuario {
         this.proposta = proposta;
     }
 
-    @OneToOne(mappedBy = "usuario")
-    private Proposta proposta;
+    // toString para facilitar debug
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", renda=" + renda +
+                '}';
+    }
 }
