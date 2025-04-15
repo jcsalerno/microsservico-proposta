@@ -1,4 +1,9 @@
-# 📦 Sistema de Propostas - Microsserviços
+<div align="center">
+ <h1>📦 Sistema de Propostas - Microsserviços </h1>
+  <img src="microsservico-matheus.png" style="width: 320px; height: 320px; object-fit: cover;" />
+</div>
+
+
 
 Este projeto faz parte do curso ministrado por Matheus Pieropan na Udemy e tem como objetivo a construção de uma aplicação completa com backend em **Spring Boot** e frontend em **Angular**, utilizando contêineres Docker.
 
@@ -70,7 +75,6 @@ service/      -> Lógica de negócio central da aplicação.
 config/       -> Configurações do projeto (ex: CORS).  
 ```
 
-
 [![Java 21](https://img.shields.io/badge/java-21-blue.svg)](https://openjdk.org/projects/jdk/21/)
 [![Spring Boot](https://img.shields.io/badge/spring--boot-3.2.0-brightgreen)](https://spring.io/projects/spring-boot)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE)
@@ -78,3 +82,7 @@ config/       -> Configurações do projeto (ex: CORS).
 [![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)]()
 
 ---
+
+### 🧾 Créditos
+
+Este projeto foi desenvolvido com base no conteúdo e curso do [Matheus Pieropan](https://github.com/matheuspieropan)
