@@ -3,13 +3,14 @@ package com.salerno.proposta_app.dto;
 
 public class PropostaResponseDto {
 
-    public PropostaResponseDto(Long id, String nome, String sobrenome, String telefone, String cpf, Double renda, int prazoPagamento, Boolean aprovada, String observacao) {
+    public PropostaResponseDto(Long id, String nome, String sobrenome, String telefone, String cpf, Double renda, String valorSolicitadoFmt, int prazoPagamento, Boolean aprovada, String observacao) {
         this.id = id;
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.telefone = telefone;
         this.cpf = cpf;
         this.renda = renda;
+        this.valorSolicitadoFmt = valorSolicitadoFmt;
         this.prazoPagamento = prazoPagamento;
         this.aprovada = aprovada;
         this.observacao = observacao;
@@ -63,6 +64,14 @@ public class PropostaResponseDto {
         this.renda = renda;
     }
 
+    public String getValorSolicitadoFmt(){
+        return valorSolicitadoFmt;
+    }
+
+    public void setValorSolicitadoFmt(String valorSolicitadoFmt) {
+        this.valorSolicitadoFmt = valorSolicitadoFmt;
+    }
+
     public int getPrazoPagamento() {
         return prazoPagamento;
     }
@@ -98,6 +107,8 @@ public class PropostaResponseDto {
     private String cpf;
 
     private Double renda;
+
+    private String valorSolicitadoFmt;
 
     private int prazoPagamento;
 

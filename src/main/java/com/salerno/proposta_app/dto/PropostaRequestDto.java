@@ -1,27 +1,23 @@
 package com.salerno.proposta_app.dto;
 
 public class PropostaRequestDto {
+    private String nome;
+    private String sobrenome;
+    private String telefone;
+    private String cpf;
+    private Double renda;
+    private Double valorSolicitado;
+    private int prazoPagamento;
 
-    public PropostaRequestDto(String nome, String sobrenome, String telefone, String cpf, Double renda, int prazoPagamento) {
+    public PropostaRequestDto(String nome, String sobrenome, String telefone, String cpf, Double renda, Double valorSolicitado, int prazoPagamento) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.telefone = telefone;
         this.cpf = cpf;
         this.renda = renda;
+        this.valorSolicitado = valorSolicitado;
         this.prazoPagamento = prazoPagamento;
     }
-
-    private String nome;
-
-    private String sobrenome;
-
-    private String telefone;
-
-    private String cpf;
-
-    private Double renda;
-
-    private int prazoPagamento;
 
     public String getNome() {
         return nome;
@@ -61,6 +57,14 @@ public class PropostaRequestDto {
 
     public void setRenda(Double renda) {
         this.renda = renda;
+    }
+
+    public Double getValorSolicitado() {
+        return valorSolicitado;
+    }
+
+    public void setValorSolicitado(Double valorSolicitado) {
+        this.valorSolicitado = valorSolicitado;
     }
 
     public int getPrazoPagamento() {
