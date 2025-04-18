@@ -29,6 +29,10 @@ docker run -d -p 80:80 --name proposta-web-container matheuspieropan/proposta-we
 ```
 # 🧪 Execução da Aplicação
 
+```bash
+docker run -d -p 5672:5672 -p 15672:15672 --name my-rabbit rabbitmq:3-management
+```
+
 A aplicação estará disponível em: [http://localhost](http://localhost)
 
 ## ▶️ Executar o Backend
