@@ -1,5 +1,6 @@
 package com.salerno.proposta_app.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -16,6 +17,7 @@ public class Usuario {
     private Double renda;
 
     @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL)
+    @JsonBackReference
     private Proposta proposta;
 
     // Construtor padrão obrigatório para JPA
