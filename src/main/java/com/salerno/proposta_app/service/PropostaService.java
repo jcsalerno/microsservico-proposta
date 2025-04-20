@@ -4,7 +4,6 @@ import com.salerno.proposta_app.dto.PropostaResponseDto;
 import com.salerno.proposta_app.entity.Proposta;
 import com.salerno.proposta_app.mapper.PropostaMapper;
 import com.salerno.proposta_app.repository.PropostaRepository;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -16,15 +15,15 @@ public class PropostaService {
 
     private PropostaRepository propostaRepository;
 
-    private NotificacaoService notificacaoService;
+    private NotificacaoRabbitService notificacaoRabbitService;
 
     private String exchange;
 
     public PropostaService(PropostaRepository propostaRepository,
-                           NotificacaoService notificacaoService,
+                           NotificacaoRabbitService notificacaoRabbitService,
                            @Value("${rabbitmq.propostapendente.exchange}") String exchange) {
         this.propostaRepository = propostaRepository;
-        this.notificacaoService = notificacaoService;
+        this.notificacaoRabbitService = notificacaoRabbitService;
         this.exchange = exchange;
     }
 
@@ -39,7 +38,7 @@ public class PropostaService {
 
     private void notificarRabbitMQ(Proposta proposta) {
         try {
-            notificacaoService.notificar(proposta, exchange);
+            notificacaoRabbitService.notificar(proposta, exchange);
         } catch (RuntimeException ex) {
             proposta.setIntegrada(false);
             propostaRepository.save(proposta);

@@ -1,15 +1,14 @@
 package com.salerno.proposta_app.service;
-import com.salerno.proposta_app.dto.PropostaResponseDto;
 import com.salerno.proposta_app.entity.Proposta;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
-public class NotificacaoService {
+public class NotificacaoRabbitService {
 
     private RabbitTemplate rabbitTemplate;
 
-    public NotificacaoService(RabbitTemplate rabbitTemplate) {
+    public NotificacaoRabbitService(RabbitTemplate rabbitTemplate) {
         this.rabbitTemplate = rabbitTemplate;
     }
 
