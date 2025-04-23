@@ -66,6 +66,12 @@ psql -U postgres -h localhost -c "CREATE DATABASE propostadb;"
 - ✅ Criar uma nova proposta
 - 📋 Listar todas as propostas existentes
 
+## 🔔 Microsserviço de Notificação
+
+Responsável por gerenciar o envio de notificações assíncronas via **Amazon SNS**.
+
+- 📂 Repositório: [microsservico-notificacao](https://github.com/jcsalerno/microsservico-notificacao)
+
 ---
 
 ## 🧠 Estrutura do Projeto
@@ -83,7 +89,7 @@ config/       -> Configurações do projeto (ex: CORS).
 [![Spring Boot](https://img.shields.io/badge/spring--boot-3.2.0-brightgreen)](https://spring.io/projects/spring-boot)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE)
 [![Build](https://img.shields.io/badge/build-Maven-blue)](https://maven.apache.org/)
-[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)]()
+[![Status](https://img.shields.io/badge/status-finalizado-brightgreen)]()
 
 ---
 
