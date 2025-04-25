@@ -23,4 +23,8 @@ public class PropostaConcluidaListener {
         PropostaResponseDto responseDto = PropostaMapper.INSTANCE.convertEntityToDto(proposta);
         webSocketService.notificar(responseDto);
     }
+
+    private void atualizarProposta(Proposta proposta) {
+        propostaRepository.atualizarProposta(proposta.getId(), proposta.getAprovada(), proposta.getObservacao());
+    }
 }
