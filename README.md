@@ -74,6 +74,10 @@ Responsável por gerenciar o envio de notificações assíncronas via **Amazon S
 
 ---
 
+## Microsserviço de Análise de crédito
+
+- 📂 Repositório: [microsservico-analise-credito](https://github.com/jcsalerno/microsservico-analise-credito)
+
 ## 🧠 Estrutura do Projeto
 
 ```text
